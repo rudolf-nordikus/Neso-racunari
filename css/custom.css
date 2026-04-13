@@ -1,0 +1,140 @@
+/* =========================================
+   NESO RAČUNARI — Custom CSS
+   ========================================= */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scroll offset za fixed navbar (~120px visina) */
+#Proces, #Racunari, #Printeri, #O-nama, #Recenzije, #Servis, #Contact {
+  scroll-margin-top: 110px;
+}
+
+/* Fallback — osiguraj da tekst bude vidljiv ako Webflow animacije ne rade */
+[words-slide-up], [text-split] {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* ---- Dugmad: glatki hover ---- */
+.cta__main,
+.cta__second,
+.button,
+.navbar-button,
+.cta__second-2 {
+  transition: opacity 0.2s ease, transform 0.15s ease !important;
+}
+.cta__main:hover,
+.cta__second:hover,
+.button:hover,
+.navbar-button:hover,
+.cta__second-2:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+/* ---- Navbar linkovi ---- */
+.navbar-link {
+  transition: opacity 0.15s ease !important;
+}
+.navbar-link:hover {
+  opacity: 0.7;
+}
+
+/* ---- Hero slika ---- */
+.image-3 {
+  transition: transform 0.5s ease;
+}
+.image-3:hover {
+  transform: scale(1.02);
+}
+
+/* ---- Content sekcije: slika hover ---- */
+.image__home-left-cell {
+  transition: transform 0.4s ease;
+  overflow: hidden;
+}
+.section_2 .w-layout-cell:hover .image__home-left-cell,
+.section__3 .w-layout-cell:hover .image__home-left-cell,
+.section_4 .w-layout-cell:hover .image__home-left-cell {
+  transform: scale(1.02);
+}
+
+/* ---- Process kartice hover ---- */
+.process-cell {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.process-cell:hover {
+  transform: translateY(-5px);
+}
+
+/* ---- Klijenti logosi ---- */
+.cell-2 {
+  transition: opacity 0.2s ease;
+  opacity: 0.65;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cell-2:hover {
+  opacity: 1;
+}
+
+/* ---- Footer linkovi ---- */
+.footer_link {
+  transition: opacity 0.15s ease;
+}
+.footer_link:hover {
+  opacity: 0.6;
+}
+.footer_link.header {
+  transition: opacity 0.15s ease;
+}
+.footer_link.header:hover {
+  opacity: 0.7;
+}
+
+/* ---- FAQ Accordion ---- */
+.rl_faq6_question {
+  cursor: pointer;
+}
+.rl_faq6_answer {
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+.rl_faq6_icon {
+  transition: transform 0.3s ease;
+}
+.rl_faq6_accordion.is-open .rl_faq6_icon {
+  transform: rotate(45deg);
+}
+
+/* ---- Form inputs focus ---- */
+.rl-form-input:focus,
+.rl-form-text-area:focus {
+  outline: none;
+  border-color: currentColor !important;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.15);
+  transition: box-shadow 0.2s ease;
+}
+
+/* ---- Viber/OLX linkovi ---- */
+.viber-link,
+.olx-link {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.viber-link:hover,
+.olx-link:hover {
+  transform: scale(1.05);
+  opacity: 0.85;
+}
+
+/* ---- Navbar logo ---- */
+.navbar-logo-link {
+  transition: opacity 0.2s ease;
+}
+.navbar-logo-link:hover {
+  opacity: 0.85;
+}
