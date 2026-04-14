@@ -36,6 +36,7 @@
 
 /* Kartica */
 .usluge-card {
+  background-color: #001C36;
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 12px;
   padding: 36px 32px 32px;
@@ -64,7 +65,7 @@
 
 /* Naslov kartice */
 .usluge-card__title {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 14px;
   line-height: 1.3;
@@ -73,7 +74,7 @@
 
 /* Opis */
 .usluge-card__text {
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.65;
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 20px;
@@ -89,7 +90,7 @@
   padding-top: 16px;
 }
 .usluge-card__list li {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.6);
   padding: 5px 0 5px 16px;
   position: relative;

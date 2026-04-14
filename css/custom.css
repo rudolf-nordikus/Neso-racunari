@@ -138,3 +138,8 @@ html {
 .navbar-logo-link:hover {
   opacity: 0.85;
 }
+
+/* ---- CTA hero dugmad — centar ---- */
+.div__cta-hero.is--home {
+  justify-content: center;
+}
