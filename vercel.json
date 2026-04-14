@@ -2,7 +2,21 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/kontakt", "destination": "/kontakt/index.html" },
-    { "source": "/usluge", "destination": "/usluge/index.html" }
+    {
+      "source": "/kontakt",
+      "destination": "/kontakt/index.html"
+    },
+    {
+      "source": "/usluge",
+      "destination": "/usluge/index.html"
+    },
+    {
+      "source": "/blog",
+      "destination": "/blog/index.html"
+    },
+    {
+      "source": "/blog/:slug",
+      "destination": "/blog/:slug/index.html"
+    }
   ]
 }
