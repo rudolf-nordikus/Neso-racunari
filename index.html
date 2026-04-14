@@ -431,11 +431,12 @@
     var section = document.querySelector('#FAQ');
     if (!section) return;
 
-    // CSS transition
     var style = document.createElement('style');
     style.textContent = [
+      /* margin se ne mjeri u scrollHeight, konvertujemo u padding */
       '#FAQ .rl_faq6_answer { overflow: hidden; transition: height 0.35s cubic-bezier(0.4,0,0.2,1); }',
-      '#FAQ .rl_faq6_icon   { transition: transform 0.35s cubic-bezier(0.4,0,0.2,1); }',
+      '#FAQ .rl_faq6_answer-wrapper { margin-bottom: 0; padding-bottom: 3rem; }',
+      '#FAQ .rl_faq6_icon { transition: transform 0.35s cubic-bezier(0.4,0,0.2,1); }',
       '#FAQ .rl_faq6_question { cursor: pointer; }'
     ].join('');
     document.head.appendChild(style);
@@ -457,8 +458,7 @@
 
         // Otvori kliknuti ako nije bio otvoren
         if (!isOpen) {
-          var wrapper = answer.querySelector('.rl_faq6_answer-wrapper');
-          answer.style.height = wrapper.scrollHeight + 'px';
+          answer.style.height = answer.scrollHeight + 'px';
           if (icon) icon.style.transform = 'rotate(45deg)';
           accordion.classList.add('faq-open');
         }
