@@ -2,6 +2,7 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/kontakt", "destination": "/kontakt/index.html" }
+    { "source": "/kontakt", "destination": "/kontakt/index.html" },
+    { "source": "/usluge", "destination": "/usluge/index.html" }
   ]
 }
