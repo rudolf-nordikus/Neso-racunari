@@ -139,7 +139,7 @@ html {
   opacity: 0.85;
 }
 
-/* ---- CTA hero dugmad — centar ---- */
+/* ---- CTA hero dugmad — lijevo ---- */
 .div__cta-hero.is--home {
-  justify-content: center;
+  justify-content: flex-start;
 }

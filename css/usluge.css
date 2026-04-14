@@ -117,7 +117,8 @@
   margin: 0 auto 36px;
   opacity: 0.75;
 }
-.usluge-cta__btns {
+.usluge-cta__btns,
+.div__cta-hero.is--home.usluge-cta__btns {
   display: flex;
   justify-content: center;
   align-items: center;
