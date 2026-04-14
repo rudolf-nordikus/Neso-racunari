@@ -276,11 +276,44 @@
 <script src="https://cdn.prod.website-files.com/68a5a028f0d385ae75796c90/js/webflow.664ef477.4ad824239d2c5241.js" type="text/javascript" crossorigin="anonymous"></script>
 <script>
   $(document).ready(function() {
-    $('.w-nav-menu a').on('click', function() {
-      if ($('.w-nav-button').is(':visible')) {
-        $('.w-nav-button').click();
+
+    // Custom smooth scroll — replaces CSS scroll-behavior to avoid Webflow conflict
+    $(document).on('click', 'a[href]', function(e) {
+      var href = $(this).attr('href') || '';
+      var match = href.match(/^(?:\/)?#(.+)$/);
+      if (!match) return;
+
+      var targetId = match[1];
+      var $target = $('#' + targetId);
+      if (!$target.length) return;
+
+      e.preventDefault();
+
+      var navHeight = $('.newnavbar').outerHeight() || 120;
+      var targetOffset = Math.max(0, $target.offset().top - navHeight - 10);
+
+      $('html, body').stop(true).animate({ scrollTop: targetOffset }, 650);
+
+      if (history.pushState) history.pushState(null, null, '#' + targetId);
+
+      // Zatvori mobilni meni ako je otvoren
+      if ($('.w-nav-button').is(':visible') && $('.w-nav-menu').hasClass('w--open')) {
+        setTimeout(function() { $('.w-nav-button').trigger('click'); }, 350);
       }
     });
+
+    // Ako stranica učita sa hashom u URL-u, popravi offset
+    if (window.location.hash) {
+      var initId = window.location.hash.substring(1);
+      var $initTarget = $('#' + initId);
+      if ($initTarget.length) {
+        setTimeout(function() {
+          var navHeight = $('.newnavbar').outerHeight() || 120;
+          $('html, body').scrollTop(Math.max(0, $initTarget.offset().top - navHeight - 10));
+        }, 150);
+      }
+    }
+
   });
 </script>
 

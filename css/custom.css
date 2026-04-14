@@ -2,9 +2,9 @@
    NESO RAČUNARI — Custom CSS
    ========================================= */
 
-/* Smooth scrolling */
+/* Smooth scroll — jQuery handles this to avoid Webflow conflict */
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 /* Scroll offset za fixed navbar (~120px visina) */
