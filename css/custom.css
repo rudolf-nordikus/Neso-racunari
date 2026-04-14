@@ -143,3 +143,24 @@ html {
 .div__cta-hero.is--home {
   justify-content: flex-start;
 }
+
+/* ---- Tipografija: Sequel Sans Medium Head za naslove ---- */
+/* Webflow CDN postavlja Sequel Sans Disp na body, h1 i heading klase.
+   Ovdje prebacujemo sve naslove na Medium Head varijantu. */
+h1, h2, h3, h4, h5, h6,
+.heading-1,
+.heading-2,
+.heading-3,
+.heading-4,
+.heading-5,
+.heading-6,
+.heading-7,
+.h1__body,
+.h1__body-2,
+.h1__body-3,
+.h2__blog-tiles,
+.hero,
+.blog-main-title,
+.blog-card-title {
+  font-family: "Sequel Sans Medium Head", Arial, sans-serif;
+}
