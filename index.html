@@ -424,5 +424,54 @@
   });
 </script>
 
+
+<script>
+(function () {
+  function initFaq() {
+    var section = document.querySelector('#FAQ');
+    if (!section) return;
+
+    // CSS transition
+    var style = document.createElement('style');
+    style.textContent = [
+      '#FAQ .rl_faq6_answer { overflow: hidden; transition: height 0.35s cubic-bezier(0.4,0,0.2,1); }',
+      '#FAQ .rl_faq6_icon   { transition: transform 0.35s cubic-bezier(0.4,0,0.2,1); }',
+      '#FAQ .rl_faq6_question { cursor: pointer; }'
+    ].join('');
+    document.head.appendChild(style);
+
+    section.querySelectorAll('.rl_faq6_question').forEach(function (q) {
+      q.addEventListener('click', function () {
+        var accordion = q.closest('.rl_faq6_accordion');
+        var answer    = accordion.querySelector('.rl_faq6_answer');
+        var icon      = accordion.querySelector('.rl_faq6_icon');
+        var isOpen    = accordion.classList.contains('faq-open');
+
+        // Zatvori sve
+        section.querySelectorAll('.rl_faq6_accordion').forEach(function (a) {
+          a.querySelector('.rl_faq6_answer').style.height = '0px';
+          var ic = a.querySelector('.rl_faq6_icon');
+          if (ic) ic.style.transform = 'rotate(0deg)';
+          a.classList.remove('faq-open');
+        });
+
+        // Otvori kliknuti ako nije bio otvoren
+        if (!isOpen) {
+          var wrapper = answer.querySelector('.rl_faq6_answer-wrapper');
+          answer.style.height = wrapper.scrollHeight + 'px';
+          if (icon) icon.style.transform = 'rotate(45deg)';
+          accordion.classList.add('faq-open');
+        }
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFaq);
+  } else {
+    initFaq();
+  }
+})();
+</script>
 </body>
 </html>
