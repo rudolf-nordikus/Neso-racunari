@@ -5,81 +5,92 @@
 /* Hero */
 .usluge-hero {
   padding: 160px 5% 80px;
-  max-width: 800px;
+  max-width: 860px;
 }
 .usluge-label {
   margin-bottom: 12px;
+  opacity: 0.6;
+  letter-spacing: 0.05em;
 }
 .usluge-hero__h1 {
   margin-bottom: 20px;
 }
 .usluge-hero__p {
-  margin-bottom: 32px;
-  max-width: 600px;
+  margin-bottom: 36px;
+  max-width: 580px;
+  opacity: 0.8;
 }
 
 /* Usluge grid */
 .usluge-section {
-  padding: 60px 5% 100px;
+  padding: 0 5% 100px;
 }
 .usluge-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 /* Kartica */
 .usluge-card {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 12px;
-  padding: 36px 32px;
+  padding: 36px 32px 32px;
   display: flex;
   flex-direction: column;
-  transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+  transition: border-color 0.25s ease, transform 0.25s ease;
 }
 .usluge-card:hover {
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.35);
   transform: translateY(-4px);
-  background: rgba(255, 255, 255, 0.07);
 }
+
+/* Ikona */
 .usluge-card__icon {
-  width: 48px;
-  height: 48px;
-  margin-bottom: 20px;
-  opacity: 0.8;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 24px;
 }
 .usluge-card__icon img {
   width: 100%;
   height: 100%;
   object-fit: contain;
   filter: brightness(0) invert(1);
+  opacity: 0.9;
 }
+
+/* Naslov kartice */
 .usluge-card__title {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 600;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   line-height: 1.3;
+  color: inherit;
 }
+
+/* Opis */
 .usluge-card__text {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  opacity: 0.75;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  opacity: 0.7;
   margin-bottom: 20px;
 }
+
+/* Lista */
 .usluge-card__list {
   list-style: none;
   padding: 0;
   margin: 0 0 28px 0;
   flex: 1;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 16px;
 }
 .usluge-card__list li {
-  font-size: 0.875rem;
-  opacity: 0.65;
-  padding: 5px 0;
-  padding-left: 18px;
+  font-size: 0.85rem;
+  opacity: 0.6;
+  padding: 5px 0 5px 16px;
   position: relative;
   line-height: 1.5;
 }
@@ -87,8 +98,10 @@
   content: "–";
   position: absolute;
   left: 0;
-  opacity: 0.5;
+  opacity: 0.4;
 }
+
+/* Dugme unutar kartice */
 .usluge-card__btn {
   align-self: flex-start;
   margin-top: auto;
@@ -98,21 +111,23 @@
 .usluge-cta {
   padding: 80px 5% 100px;
   text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 .usluge-cta__title {
   margin-bottom: 16px;
 }
 .usluge-cta__p {
-  max-width: 540px;
+  max-width: 520px;
   margin: 0 auto 36px;
+  opacity: 0.75;
 }
 .usluge-cta__btns {
   justify-content: center;
+  flex-wrap: wrap;
   gap: 16px;
 }
 
-/* Responsive */
+/* Responsive — tablet */
 @media (max-width: 991px) {
   .usluge-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -121,12 +136,18 @@
     padding: 140px 5% 60px;
   }
 }
+
+/* Responsive — mobile */
 @media (max-width: 600px) {
   .usluge-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
   .usluge-hero {
-    padding: 120px 5% 50px;
+    padding: 120px 5% 48px;
+  }
+  .usluge-card {
+    padding: 28px 24px;
   }
   .usluge-cta__btns {
     flex-direction: column;
