@@ -144,6 +144,23 @@ html {
   justify-content: flex-start;
 }
 
+/* ---- Mobilni: kompenzacija za fixed navbar ---- */
+/* .newnavbar je position:fixed, hero sekcija počinje od top:0.
+   Na mobilnom ukupna visina navbara (top bar ~40px + logo red ~70px) = ~110px.
+   Dodajemo padding-top na hero sekciju da sadržaj ne bude prekriven. */
+@media screen and (max-width: 767px) {
+  #Servis {
+    padding-top: 110px;
+  }
+}
+
+/* Na portrait mobilnom (<=479px) navbar je malo viši */
+@media screen and (max-width: 479px) {
+  #Servis {
+    padding-top: 120px;
+  }
+}
+
 /* ---- Tipografija: Sequel Sans Medium Head za naslove ---- */
 /* Webflow CDN postavlja Sequel Sans Disp na body, h1 i heading klase.
    Ovdje prebacujemo sve naslove na Medium Head varijantu. */
