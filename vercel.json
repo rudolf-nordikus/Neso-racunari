@@ -2,29 +2,16 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    {
-      "source": "/kontakt",
-      "destination": "/kontakt/index.html"
-    },
-    {
-      "source": "/usluge",
-      "destination": "/usluge/index.html"
-    },
-    {
-      "source": "/blog",
-      "destination": "/blog/index.html"
-    },
-    {
-      "source": "/blog/:slug",
-      "destination": "/blog/:slug/index.html"
-    },
-    {
-      "source": "/servis-laptopa-sarajevo",
-      "destination": "/servis-laptopa-sarajevo/index.html"
-    },
-    {
-      "source": "/servis-laptopa-sarajevo/",
-      "destination": "/servis-laptopa-sarajevo/index.html"
-    }
+    { "source": "/kontakt", "destination": "/kontakt/index.html" },
+    { "source": "/usluge", "destination": "/usluge/index.html" },
+    { "source": "/blog", "destination": "/blog/index.html" },
+    { "source": "/blog/:slug", "destination": "/blog/:slug/index.html" },
+    { "source": "/servis-laptopa-sarajevo", "destination": "/servis-laptopa-sarajevo/index.html" },
+    { "source": "/servis-laptopa-sarajevo/", "destination": "/servis-laptopa-sarajevo/index.html" },
+    { "source": "/servis-racunara-sarajevo", "destination": "/servis-racunara-sarajevo/index.html" },
+    { "source": "/servis-printera-sarajevo", "destination": "/servis-printera-sarajevo/index.html" },
+    { "source": "/instalacija-windowsa-sarajevo", "destination": "/instalacija-windowsa-sarajevo/index.html" },
+    { "source": "/uklanjanje-virusa-sarajevo", "destination": "/uklanjanje-virusa-sarajevo/index.html" },
+    { "source": "/mobilni-servis-racunara-sarajevo", "destination": "/mobilni-servis-racunara-sarajevo/index.html" }
   ]
 }
