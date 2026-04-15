@@ -17,6 +17,14 @@
     {
       "source": "/blog/:slug",
       "destination": "/blog/:slug/index.html"
+    },
+    {
+      "source": "/servis-laptopa-sarajevo",
+      "destination": "/servis-laptopa-sarajevo/index.html"
+    },
+    {
+      "source": "/servis-laptopa-sarajevo/",
+      "destination": "/servis-laptopa-sarajevo/index.html"
     }
   ]
 }
