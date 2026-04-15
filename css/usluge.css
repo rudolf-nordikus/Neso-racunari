@@ -5,6 +5,13 @@
 /* Hero */
 .usluge-hero {
   padding: 160px 5% 80px;
+  max-width: 100%;
+  background-image: url('https://cdn.prod.website-files.com/68a5a028f0d385ae75796c90/68ac45a15272c34c9b38e959_BG%201.svg');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 45%;
+}
+.usluge-hero__inner-wrap {
   max-width: 860px;
 }
 .usluge-label {
@@ -153,6 +160,7 @@
   }
   .usluge-hero {
     padding: 140px 5% 60px;
+    background-size: 40%;
   }
 }
 
@@ -164,6 +172,7 @@
   }
   .usluge-hero {
     padding: 120px 5% 48px;
+    background-image: none;
   }
   .usluge-card {
     padding: 28px 24px;
