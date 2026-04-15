@@ -55,6 +55,105 @@ html {
   opacity: 0.7;
 }
 
+/* ---- Navbar scroll shadow ---- */
+.newnavbar {
+  transition: box-shadow 0.3s ease;
+}
+.newnavbar.is-scrolled {
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.45);
+}
+
+/* ---- Navbar dropdown ---- */
+.nav-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.nav-dropdown__toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+.nav-dropdown__arrow {
+  transition: transform 0.22s ease;
+  flex-shrink: 0;
+}
+.nav-dropdown.is-open .nav-dropdown__arrow {
+  transform: rotate(180deg);
+}
+.nav-dropdown__list {
+  display: none;
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #001C36;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 8px;
+  min-width: 220px;
+  flex-direction: column;
+  gap: 2px;
+  z-index: 200;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+.nav-dropdown.is-open .nav-dropdown__list {
+  display: flex;
+}
+.nav-dropdown__link {
+  padding: 10px 14px;
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.nav-dropdown__link:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+/* Mobile dropdown */
+@media (max-width: 991px) {
+  .nav-dropdown {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .nav-dropdown__toggle {
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+  .nav-dropdown__list {
+    position: static;
+    transform: none;
+    background: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0 20px 8px 32px;
+    width: 100%;
+  }
+  .nav-dropdown__link {
+    padding: 8px 0;
+    font-size: 1rem;
+    border-radius: 0;
+  }
+  .nav-dropdown__link:hover {
+    background: none;
+    opacity: 0.7;
+  }
+}
+
 /* ---- Hero slika ---- */
 .image-3 {
   transition: transform 0.5s ease;
