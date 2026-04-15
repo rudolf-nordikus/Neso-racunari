@@ -82,9 +82,9 @@ html { scroll-behavior: auto; }
 .navbar-logo-link { transition: opacity 0.2s ease; }
 .navbar-logo-link:hover { opacity: 0.85; }
 h1, h2, h3, h4, h5, h6, .heading-1, .heading-2, .heading-3, .heading-4, .heading-5, .heading-6, .heading-7, .h1__body, .h1__body-2, .h1__body-3, .h2__blog-tiles, .hero, .blog-main-title, .blog-card-title { font-family: "Sequel Sans Medium Head", Arial, sans-serif; }
-.breadcrumb-nav { font-size: .78rem; color: rgba(255,255,255,.3); margin-bottom: 1.4rem; letter-spacing: .01em; }
-.breadcrumb-nav a { text-decoration: none; color: rgba(255,255,255,.3); }
-.breadcrumb-nav a:hover { color: rgba(255,255,255,.65); }
+.breadcrumb-nav { font-size: .78rem; color: rgba(255,255,255,.6); margin-bottom: 1.4rem; letter-spacing: .01em; }
+.breadcrumb-nav a { text-decoration: none; color: rgba(255,255,255,.6); }
+.breadcrumb-nav a:hover { color: #fff; }
 
 /* ── Heading font override: sve varijante → Medium Head + loosiji spacing ── */
 h1, h2, h3, h4, h5, h6,
@@ -98,19 +98,18 @@ h1, h2, h3, h4, h5, h6,
 /* Service page specific */
 .srv-hero-wrap {
   padding: 120px 5vw 0;
-  background-image:
-    linear-gradient(to right, rgba(14,14,14,0.96) 40%, rgba(14,14,14,0.78) 100%),
-    url('https://cdn.prod.website-files.com/68a5a028f0d385ae75796c90/68d535cafa80d5ad4ebda020_Mobilni%20servis%20racunara%20Sarajevo.png');
+  background-image: url('https://cdn.prod.website-files.com/68a5a028f0d385ae75796c90/68ac45a15272c34c9b38e959_BG%201.svg');
   background-size: cover;
-  background-position: center;
+  background-position: center top;
+  background-repeat: no-repeat;
 }
 .srv-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; max-width: 1200px; margin: 0 auto; padding-bottom: 72px; }
-.srv-hero__label { font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.35); margin-bottom: 14px; font-family: "Sequel Sans Roman Body", Arial, sans-serif !important; }
+.srv-hero__label { font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.65); margin-bottom: 14px; font-family: "Sequel Sans Roman Body", Arial, sans-serif !important; }
 .srv-hero h1 { font-size: clamp(2.2rem,4.5vw,3.4rem); line-height: 1.08; letter-spacing: 0.02em; color: #fff; margin-bottom: 20px; }
 .srv-hero h1 .text-span { color: #f5c518; }
-.srv-hero__sub { font-size: 1.05rem; line-height: 1.78; color: rgba(255,255,255,.6); margin-bottom: 28px; letter-spacing: 0; font-family: "Sequel Sans Roman Body", Arial, sans-serif; }
+.srv-hero__sub { font-size: 1.05rem; line-height: 1.78; color: rgba(255,255,255,.88); margin-bottom: 28px; letter-spacing: 0; font-family: "Sequel Sans Roman Body", Arial, sans-serif; }
 .srv-trust { display: flex; flex-wrap: wrap; gap: 14px 26px; margin-bottom: 36px; }
-.srv-trust__item { display: flex; align-items: center; gap: 9px; font-size: .78rem; color: rgba(255,255,255,.45); letter-spacing: .07em; text-transform: uppercase; font-family: "Sequel Sans Roman Body", Arial, sans-serif; }
+.srv-trust__item { display: flex; align-items: center; gap: 9px; font-size: .78rem; color: rgba(255,255,255,.75); letter-spacing: .07em; text-transform: uppercase; font-family: "Sequel Sans Roman Body", Arial, sans-serif; }
 .srv-trust__dot { width: 5px; height: 5px; border-radius: 50%; background: #f5c518; flex-shrink: 0; }
 .srv-cta-row { display: flex; flex-wrap: wrap; gap: 14px; }
 .srv-hero-img { display: flex; align-items: center; justify-content: center; }
@@ -119,7 +118,7 @@ h1, h2, h3, h4, h5, h6,
 .srv-divider { width: 100%; height: 1px; background: rgba(255,255,255,.06); }
 
 .srv-section { padding: 72px 5vw; max-width: 1100px; margin: 0 auto; }
-.srv-section__label { font-size: .7rem; letter-spacing: .22em; text-transform: uppercase; color: rgba(255,255,255,.3); margin-bottom: 10px; font-family: "Sequel Sans Roman Body", Arial, sans-serif; }
+.srv-section__label { font-size: .7rem; letter-spacing: .22em; text-transform: uppercase; color: rgba(255,255,255,.6); margin-bottom: 10px; font-family: "Sequel Sans Roman Body", Arial, sans-serif; }
 .srv-section h2 { font-size: clamp(1.8rem,3.2vw,2.4rem); line-height: 1.14; letter-spacing: 0.03em; color: #fff; margin-bottom: 44px; }
 
 .srv-problems { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px,1fr)); gap: 14px; }
@@ -128,21 +127,21 @@ h1, h2, h3, h4, h5, h6,
 .srv-problem__icon { margin-bottom: 16px; line-height: 1; }
 .srv-problem__icon svg { display: block; }
 .srv-problem__title { font-size: .98rem; font-weight: 700; color: #fff; margin-bottom: 6px; letter-spacing: 0.03em; }
-.srv-problem__desc { font-size: .86rem; line-height: 1.62; color: rgba(255,255,255,.42); letter-spacing: 0; font-family: "Sequel Sans Roman Body", Arial, sans-serif; }
+.srv-problem__desc { font-size: .86rem; line-height: 1.62; color: rgba(255,255,255,.75); letter-spacing: 0; font-family: "Sequel Sans Roman Body", Arial, sans-serif; }
 
 .srv-process { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; }
 .srv-step { text-align: center; padding: 36px 24px; border-right: 1px solid rgba(255,255,255,.06); }
 .srv-step:last-child { border-right: none; }
 .srv-step__num { font-size: 3rem; font-weight: 700; color: #f5c518; line-height: 1; margin-bottom: 14px; letter-spacing: 0; }
 .srv-step__title { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 8px; letter-spacing: 0.04em; }
-.srv-step__desc { font-size: .86rem; line-height: 1.65; color: rgba(255,255,255,.42); }
+.srv-step__desc { font-size: .86rem; line-height: 1.65; color: rgba(255,255,255,.78); font-family: "Sequel Sans Roman Body", Arial, sans-serif; }
 
 .srv-pricing-list { display: flex; flex-direction: column; }
 .srv-price-item { border-bottom: 1px solid rgba(255,255,255,.07); padding: 16px 0; display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
 .srv-price-item:first-child { border-top: 1px solid rgba(255,255,255,.07); }
-.srv-price-name { font-size: .95rem; color: rgba(255,255,255,.7); }
+.srv-price-name { font-size: .95rem; color: rgba(255,255,255,.9); font-family: "Sequel Sans Roman Body", Arial, sans-serif; }
 .srv-price-val { font-size: .95rem; font-weight: 700; color: #f5c518; white-space: nowrap; }
-.srv-price-note { font-size: .76rem; color: rgba(255,255,255,.28); margin-top: 18px; line-height: 1.6; }
+.srv-price-note { font-size: .76rem; color: rgba(255,255,255,.58); margin-top: 18px; line-height: 1.6; font-family: "Sequel Sans Roman Body", Arial, sans-serif; }
 
 .srv-faq { display: flex; flex-direction: column; }
 .srv-faq__item { border-bottom: 1px solid rgba(255,255,255,.07); padding: 22px 0; cursor: pointer; }
@@ -150,13 +149,13 @@ h1, h2, h3, h4, h5, h6,
 .srv-faq__q { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
 .srv-faq__question { font-size: .98rem; font-weight: 700; color: #fff; letter-spacing: 0.04em; }
 .srv-faq__icon { color: #f5c518; font-size: 1.25rem; flex-shrink: 0; transition: transform .3s cubic-bezier(.4,0,.2,1); font-style: normal; }
-.srv-faq__answer { font-size: .92rem; line-height: 1.72; color: rgba(255,255,255,.52); max-height: 0; overflow: hidden; transition: max-height .35s cubic-bezier(.4,0,.2,1), padding .3s ease; }
+.srv-faq__answer { font-size: .92rem; line-height: 1.72; color: rgba(255,255,255,.8); max-height: 0; overflow: hidden; transition: max-height .35s cubic-bezier(.4,0,.2,1), padding .3s ease; font-family: "Sequel Sans Roman Body", Arial, sans-serif; }
 .srv-faq__item.open .srv-faq__icon { transform: rotate(45deg); }
 .srv-faq__item.open .srv-faq__answer { max-height: 220px; padding-top: 14px; }
 
 .srv-cta-section { background: rgba(245,197,24,.05); border-top: 1px solid rgba(245,197,24,.12); padding: 80px 5vw; text-align: center; }
 .srv-cta-section h2 { font-size: clamp(1.9rem,4vw,2.8rem); color: #fff; margin-bottom: 14px; letter-spacing: 0.03em; }
-.srv-cta-section p { font-size: 1rem; color: rgba(255,255,255,.5); margin-bottom: 34px; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.65; }
+.srv-cta-section p { font-size: 1rem; color: rgba(255,255,255,.82); margin-bottom: 34px; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.65; font-family: "Sequel Sans Roman Body", Arial, sans-serif; }
 .srv-cta-section .srv-cta-row { justify-content: center; }
 
 @media screen and (max-width: 991px) {
