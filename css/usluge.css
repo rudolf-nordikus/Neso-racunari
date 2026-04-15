@@ -9,7 +9,8 @@
   background-image: url('https://cdn.prod.website-files.com/68a5a028f0d385ae75796c90/68ac45a15272c34c9b38e959_BG%201.svg');
   background-repeat: no-repeat;
   background-position: right center;
-  background-size: 45%;
+  background-size: 100%;
+  margin-bottom: 60px;
 }
 .usluge-hero__inner-wrap {
   max-width: 860px;
@@ -160,7 +161,6 @@
   }
   .usluge-hero {
     padding: 140px 5% 60px;
-    background-size: 40%;
   }
 }
 
