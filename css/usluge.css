@@ -103,6 +103,20 @@
   opacity: 0.4;
 }
 
+/* Link na kartici */
+.usluge-card__link {
+  display: inline-block;
+  margin-top: auto;
+  padding-top: 16px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.usluge-card__link:hover {
+  color: #fff;
+}
+
 /* CTA sekcija */
 .usluge-cta {
   padding: 80px 5% 100px;
