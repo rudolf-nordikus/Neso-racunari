@@ -110,7 +110,7 @@ h1, h2, h3, h4, h5, h6,
 .srv-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; max-width: 1200px; margin: 0 auto; width: 100%; }
 .srv-hero__label { font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.65); margin-bottom: 14px; font-family: "Sequel Sans Roman Body", Arial, sans-serif !important; }
 .srv-hero h1 { font-size: clamp(2.2rem,4.5vw,3.4rem); line-height: 1.08; letter-spacing: 0.02em; color: #fff; margin-bottom: 20px; }
-.srv-hero h1 .text-span { color: #f5c518; }
+.srv-hero h1 .text-span { color: #fff; }
 .srv-hero__sub { font-size: 1.05rem; line-height: 1.78; color: rgba(255,255,255,.88); margin-bottom: 28px; letter-spacing: 0; font-family: "Sequel Sans Roman Body", Arial, sans-serif; }
 .srv-trust { display: flex; flex-wrap: wrap; gap: 14px 26px; margin-bottom: 36px; }
 .srv-trust__item { display: flex; align-items: center; gap: 9px; font-size: .78rem; color: rgba(255,255,255,.75); letter-spacing: .07em; text-transform: uppercase; font-family: "Sequel Sans Roman Body", Arial, sans-serif; }
@@ -223,20 +223,11 @@ h1, h2, h3, h4, h5, h6,
 
       <!-- Lijeva kolona: tekst -->
       <div class="srv-hero">
-        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
-          <a href="/">Pocetna</a> &rsaquo; <a href="/usluge">Usluge</a> &rsaquo; Servis laptopa Sarajevo
-        </nav>
         <p class="srv-hero__label">Mobilni servis &middot; Sarajevo</p>
         <h1>Servis laptopa <span class="text-span">koji dolazi</span> tebi</h1>
         <p class="srv-hero__sub">Ekran, baterija, tastatura, pregrijavanje ili spor sistem — dolazimo na tvoju adresu, preuzimamo laptop i dostavljamo ga nazad popravljen.</p>
-        <div class="srv-trust">
-          <span class="srv-trust__item"><span class="srv-trust__dot"></span>Besplatna dijagnostika</span>
-          <span class="srv-trust__item"><span class="srv-trust__dot"></span>Garancija na popravku</span>
-          <span class="srv-trust__item"><span class="srv-trust__dot"></span>Mobilni dolazak</span>
-          <span class="srv-trust__item"><span class="srv-trust__dot"></span>&#9733; 5.0 &middot; 9 recenzija</span>
-        </div>
         <div class="srv-cta-row">
-          <a href="/kontakt" class="cta__main w-button">Zakazi servis</a>
+          <a href="/kontakt" class="cta__main w-button">Zakaži servis</a>
           <a href="tel:+38761336599" class="cta__second w-button">+387 61 336 599</a>
         </div>
       </div>
@@ -245,8 +236,8 @@ h1, h2, h3, h4, h5, h6,
       <div class="srv-hero-img">
         <img
           src="/images/laptop-servis-hero.png"
-          alt="Servis laptopa Sarajevo – otvoreni laptop sa unutrašnjim komponentama"
-          width="560"
+          alt="Nešo Računari – servis laptopa Sarajevo"
+          width="520"
           loading="eager"
           fetchpriority="high"
         />
@@ -257,10 +248,10 @@ h1, h2, h3, h4, h5, h6,
 
   <div class="srv-divider"></div>
 
-  <!-- STA POPRAVLJAMO -->
+  <!-- ŠTA POPRAVLJAMO -->
   <div class="srv-section">
-    <p class="srv-section__label">Sta popravljamo</p>
-    <h2>Najcesci kvarovi laptopa</h2>
+    <p class="srv-section__label">Šta popravljamo</p>
+    <h2>Najčešći kvarovi laptopa</h2>
     <div class="srv-problems">
       <div class="srv-problem">
         <div class="srv-problem__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
@@ -270,27 +261,27 @@ h1, h2, h3, h4, h5, h6,
       <div class="srv-problem">
         <div class="srv-problem__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="18" height="12" rx="2"/><path d="M23 13v-2"/><path d="M6 10v4M9 12H3"/></svg></div>
         <div class="srv-problem__title">Zamjena baterije</div>
-        <div class="srv-problem__desc">Baterija se brzo prazni, ne drzi punjenje ili se ne puni uopce.</div>
+        <div class="srv-problem__desc">Baterija se brzo prazni, ne drži punjenje ili se ne puni uopće.</div>
       </div>
       <div class="srv-problem">
         <div class="srv-problem__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><circle cx="7" cy="9" r="0.6" fill="#fff"/><circle cx="12" cy="9" r="0.6" fill="#fff"/><circle cx="17" cy="9" r="0.6" fill="#fff"/><circle cx="7" cy="13" r="0.6" fill="#fff"/><circle cx="17" cy="13" r="0.6" fill="#fff"/><path d="M9 13h6M8 17h8"/></svg></div>
         <div class="srv-problem__title">Zamjena tastature</div>
-        <div class="srv-problem__desc">Tipke ne reaguju, slova se ne ukucavaju, fizicko ostecenje.</div>
+        <div class="srv-problem__desc">Tipke ne reaguju, slova se ne upisuju ili ima fizičkog oštećenja.</div>
       </div>
       <div class="srv-problem">
         <div class="srv-problem__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg></div>
         <div class="srv-problem__title">Pregrijavanje</div>
-        <div class="srv-problem__desc">Laptop se gasi sam, ventilator radi punom snagom, vruc dodir.</div>
+        <div class="srv-problem__desc">Laptop se gasi sam, ventilator radi punom snagom ili je vruć na dodir.</div>
       </div>
       <div class="srv-problem">
         <div class="srv-problem__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="8" x2="12" y2="12"/><circle cx="12" cy="16" r="0.6" fill="#fff"/></svg></div>
         <div class="srv-problem__title">Virusi i malware</div>
-        <div class="srv-problem__desc">Spor sistem, nepoznati programi, poruke i reklame koje ometaju rad.</div>
+        <div class="srv-problem__desc">Spor sistem, nepoznati programi, skočni prozori koji ometaju rad.</div>
       </div>
       <div class="srv-problem">
         <div class="srv-problem__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div>
-        <div class="srv-problem__title">Prolijevanje tecnosti</div>
-        <div class="srv-problem__desc">Voda ili kafa prosuta po laptopu — hitna intervencija sprecava vece stete.</div>
+        <div class="srv-problem__title">Prolijevanje tečnosti</div>
+        <div class="srv-problem__desc">Voda ili kafa prolivena po laptopu — hitna intervencija sprječava veće štete.</div>
       </div>
     </div>
   </div>
@@ -304,18 +295,18 @@ h1, h2, h3, h4, h5, h6,
     <div class="srv-process">
       <div class="srv-step">
         <div class="srv-step__num">1.</div>
-        <div class="srv-step__title">Pozovite ili pisite</div>
-        <div class="srv-step__desc">Opiste problem, dogovaramo dolazak na vasu adresu u Sarajevu u roku koji vam odgovara.</div>
+        <div class="srv-step__title">Pozovite ili pišite</div>
+        <div class="srv-step__desc">Opišite problem, dogovaramo dolazak na vašu adresu u Sarajevu u roku koji vam odgovara.</div>
       </div>
       <div class="srv-step">
         <div class="srv-step__num">2.</div>
         <div class="srv-step__title">Dijagnostika i popravka</div>
-        <div class="srv-step__desc">Preuzimamo laptop, besplatno dijagnosticiramo i radimo popravku tek uz vasu potvrdu cijene.</div>
+        <div class="srv-step__desc">Preuzimamo laptop, besplatno dijagnosticiramo i radimo popravku tek uz vašu potvrdu cijene.</div>
       </div>
       <div class="srv-step">
         <div class="srv-step__num">3.</div>
         <div class="srv-step__title">Dostava nazad</div>
-        <div class="srv-step__desc">Popravljen laptop dostavljamo na dogovorenu adresu, s garancijom na izvrseni rad.</div>
+        <div class="srv-step__desc">Popravljen laptop dostavljamo na dogovorenu adresu, s garancijom na izvršeni rad.</div>
       </div>
     </div>
   </div>
@@ -324,55 +315,56 @@ h1, h2, h3, h4, h5, h6,
 
   <!-- CIJENE -->
   <div class="srv-section">
-    <p class="srv-section__label">Okvirne cijene</p>
-    <h2>Koliko kosta servis laptopa?</h2>
+    <p class="srv-section__label">Cijene usluga</p>
+    <h2>Šta košta servis laptopa?</h2>
+    <p style="font-size:.95rem;color:rgba(255,255,255,.7);margin-bottom:28px;line-height:1.65;font-family:'Sequel Sans Roman Body',Arial,sans-serif;">Svaki kvar je drugačiji — cijena ovisi o modelu laptopa i stepenu oštećenja. Ispod su orijentacioni iznosi da znaš šta da očekuješ. <strong style="color:#fff;">Tačnu cijenu dobijate nakon besplatne dijagnostike, prije nego što se odlučite na popravku.</strong></p>
     <div class="srv-pricing-list">
-      <div class="srv-price-item"><span class="srv-price-name">Zamjena ekrana</span><span class="srv-price-val">80 – 180 KM</span></div>
-      <div class="srv-price-item"><span class="srv-price-name">Zamjena baterije</span><span class="srv-price-val">50 – 100 KM</span></div>
-      <div class="srv-price-item"><span class="srv-price-name">Zamjena tastature</span><span class="srv-price-val">40 – 80 KM</span></div>
-      <div class="srv-price-item"><span class="srv-price-name">Ciscenje i termalna pasta</span><span class="srv-price-val">40 – 60 KM</span></div>
-      <div class="srv-price-item"><span class="srv-price-name">Instalacija sistema (Windows)</span><span class="srv-price-val">40 – 60 KM</span></div>
-      <div class="srv-price-item"><span class="srv-price-name">Nadogradnja RAM / SSD</span><span class="srv-price-val">30 – 50 KM + dio</span></div>
-      <div class="srv-price-item"><span class="srv-price-name">Uklanjanje virusa</span><span class="srv-price-val">40 – 70 KM</span></div>
-      <div class="srv-price-item"><span class="srv-price-name">Popravka maticne ploce</span><span class="srv-price-val">od 80 KM</span></div>
+      <div class="srv-price-item"><span class="srv-price-name">Zamjena ekrana</span><span class="srv-price-val">od 80 KM</span></div>
+      <div class="srv-price-item"><span class="srv-price-name">Zamjena baterije</span><span class="srv-price-val">od 50 KM</span></div>
+      <div class="srv-price-item"><span class="srv-price-name">Zamjena tastature</span><span class="srv-price-val">od 40 KM</span></div>
+      <div class="srv-price-item"><span class="srv-price-name">Čišćenje i termalna pasta</span><span class="srv-price-val">od 40 KM</span></div>
+      <div class="srv-price-item"><span class="srv-price-name">Instalacija sistema (Windows)</span><span class="srv-price-val">od 40 KM</span></div>
+      <div class="srv-price-item"><span class="srv-price-name">Nadogradnja RAM / SSD</span><span class="srv-price-val">od 30 KM + dijelovi</span></div>
+      <div class="srv-price-item"><span class="srv-price-name">Uklanjanje virusa i malwarea</span><span class="srv-price-val">od 40 KM</span></div>
+      <div class="srv-price-item"><span class="srv-price-name">Popravka matične ploče</span><span class="srv-price-val">od 80 KM</span></div>
     </div>
-    <p class="srv-price-note">Dijagnostika je besplatna. Konacnu cijenu dobijate prije pocetka popravke — bez iznenadjenja.</p>
+    <p class="srv-price-note">Dijagnostika je besplatna. Ove cifre su orijentacione — konačna cijena se dogovara tek nakon pregleda uređaja i vaše potvrde.</p>
   </div>
 
   <div class="srv-divider"></div>
 
   <!-- FAQ -->
   <div class="srv-section">
-    <p class="srv-section__label">Cesta pitanja</p>
-    <h2>Sta najcesce pitaju</h2>
+    <p class="srv-section__label">Česta pitanja</p>
+    <h2>Šta najčešće pitaju</h2>
     <div class="srv-faq">
       <div class="srv-faq__item">
         <div class="srv-faq__q">
-          <span class="srv-faq__question">Koliko kosta servis laptopa u Sarajevu?</span>
+          <span class="srv-faq__question">Koliko košta servis laptopa u Sarajevu?</span>
           <i class="srv-faq__icon">+</i>
         </div>
-        <div class="srv-faq__answer">Dijagnostika je besplatna. Cijena ovisi o kvaru: zamjena ekrana od 80 do 180 KM, baterije od 50 do 100 KM, tastature od 40 do 80 KM. Konacnu cijenu dobijate prije nego sto se slozite s popravkom.</div>
+        <div class="srv-faq__answer">Dijagnostika je besplatna. Orijentacione cijene: zamjena ekrana od 80 KM, baterije od 50 KM, tastature od 40 KM. Tačnu cijenu dobijate nakon pregleda i tek tada se odlučujete.</div>
       </div>
       <div class="srv-faq__item">
         <div class="srv-faq__q">
-          <span class="srv-faq__question">Da li dolazite na kucnu adresu?</span>
+          <span class="srv-faq__question">Da li dolazite na kućnu adresu?</span>
           <i class="srv-faq__icon">+</i>
         </div>
-        <div class="srv-faq__answer">Da — mi smo mobilni servis. Dolazimo na vasu adresu u Sarajevu, preuzimamo laptop i dostavljamo ga nazad kad je popravljen.</div>
+        <div class="srv-faq__answer">Da — mi smo mobilni servis. Dolazimo na vašu adresu u Sarajevu, preuzimamo laptop i dostavljamo ga nazad kad je popravljen.</div>
       </div>
       <div class="srv-faq__item">
         <div class="srv-faq__q">
           <span class="srv-faq__question">Koliko traje popravka laptopa?</span>
           <i class="srv-faq__icon">+</i>
         </div>
-        <div class="srv-faq__answer">Vecinu popravki zavrsimo u roku od 1 do 3 dana. Za slozene kvarove ili nabavku dijelova rok dogovaramo unaprijed i obavijestimo vas.</div>
+        <div class="srv-faq__answer">Većinu popravki završimo u roku od 1 do 3 dana. Za složenije kvarove ili nabavku dijelova rok dogovaramo unaprijed i obavijestimo vas.</div>
       </div>
       <div class="srv-faq__item">
         <div class="srv-faq__q">
           <span class="srv-faq__question">Postoji li garancija na popravku?</span>
           <i class="srv-faq__icon">+</i>
         </div>
-        <div class="srv-faq__answer">Da, na sve popravke dajemo garanciju. Trajanje dogovaramo ovisno o vrsti intervencije — obicno 3 do 6 mjeseci.</div>
+        <div class="srv-faq__answer">Da, na sve popravke dajemo garanciju. Trajanje dogovaramo ovisno o vrsti intervencije — obično 3 do 6 mjeseci.</div>
       </div>
     </div>
   </div>
@@ -380,7 +372,7 @@ h1, h2, h3, h4, h5, h6,
   <!-- CTA -->
   <div class="srv-cta-section">
     <h2>Laptop treba servis?</h2>
-    <p>Pozovite nas ili popunite formu — dolazimo na vasu adresu u Sarajevu, dijagnostika je besplatna.</p>
+    <p>Pozovite nas ili popunite formu — dolazimo na vašu adresu u Sarajevu, dijagnostika je besplatna.</p>
     <div class="srv-cta-row">
       <a href="/kontakt" class="cta__main w-button">Kontakt forma</a>
       <a href="tel:+38761336599" class="cta__second w-button">+387 61 336 599</a>
