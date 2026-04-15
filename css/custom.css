@@ -145,19 +145,23 @@ html {
 }
 
 /* ---- Mobilni: kompenzacija za fixed navbar ---- */
-/* .newnavbar je position:fixed, hero sekcija počinje od top:0.
-   Na mobilnom ukupna visina navbara (top bar ~40px + logo red ~70px) = ~110px.
-   Dodajemo padding-top na hero sekciju da sadržaj ne bude prekriven. */
 @media screen and (max-width: 767px) {
+  .navbar-container {
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+  }
   #Servis {
-    padding-top: 110px;
+    padding-top: 88px;
   }
 }
 
-/* Na portrait mobilnom (<=479px) navbar je malo viši */
 @media screen and (max-width: 479px) {
+  .navbar-container {
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+  }
   #Servis {
-    padding-top: 120px;
+    padding-top: 92px;
   }
 }
 
