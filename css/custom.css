@@ -18,12 +18,14 @@ html {
   transform: translateY(0) !important;
 }
 
-/* ---- Dugmad: glatki hover ---- */
+/* ---- Dugmad: zaobljeni, font, hover ---- */
 .cta__main,
 .cta__second,
 .button,
 .navbar-button,
 .cta__second-2 {
+  border-radius: 999px !important;
+  font-family: "Sequel Sans Roman Body", Arial, sans-serif !important;
   transition: opacity 0.2s ease, transform 0.15s ease !important;
 }
 .cta__main:hover,
@@ -33,6 +35,16 @@ html {
 .cta__second-2:hover {
   opacity: 0.85;
   transform: translateY(-2px);
+}
+
+/* Primarno dugme — žuto */
+.cta__main {
+  background-color: #FFC300 !important;
+  color: #00142D !important;
+}
+.cta__main:hover {
+  opacity: 1 !important;
+  background-color: #e6b000 !important;
 }
 
 /* ---- Navbar linkovi ---- */
