@@ -90,44 +90,51 @@ h1, h2, h3, h4, h5, h6, .heading-1, .heading-2, .heading-3, .heading-4, .heading
 h1, h2, h3, h4, h5, h6,
 .heading-1, .heading-2, .heading-3, .heading-4, .heading-5, .heading-6, .heading-7,
 .h1__body, .h1__body-2, .h1__body-3, .hero,
-.srv-problem__title, .srv-step__title, .srv-faq__question,
-.srv-price-name, .srv-price-val {
+.srv-problem__title, .srv-step__title, .srv-faq__question {
   font-family: "Sequel Sans Medium Head", Arial, sans-serif !important;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.04em;
 }
 
 /* Service page specific */
-.srv-hero-wrap { padding: 120px 5vw 0; }
+.srv-hero-wrap {
+  padding: 120px 5vw 0;
+  background-image:
+    linear-gradient(to right, rgba(14,14,14,0.96) 40%, rgba(14,14,14,0.78) 100%),
+    url('https://cdn.prod.website-files.com/68a5a028f0d385ae75796c90/68d535cafa80d5ad4ebda020_Mobilni%20servis%20racunara%20Sarajevo.png');
+  background-size: cover;
+  background-position: center;
+}
 .srv-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; max-width: 1200px; margin: 0 auto; padding-bottom: 72px; }
-.srv-hero__label { font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: rgba(255,255,255,.35); margin-bottom: 14px; font-family: "Sequel Sans Roman Body", Arial, sans-serif !important; }
-.srv-hero h1 { font-size: clamp(2.2rem,4.5vw,3.4rem); line-height: 1.06; letter-spacing: -.01em; color: #fff; margin-bottom: 20px; }
+.srv-hero__label { font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.35); margin-bottom: 14px; font-family: "Sequel Sans Roman Body", Arial, sans-serif !important; }
+.srv-hero h1 { font-size: clamp(2.2rem,4.5vw,3.4rem); line-height: 1.08; letter-spacing: 0.02em; color: #fff; margin-bottom: 20px; }
 .srv-hero h1 .text-span { color: #f5c518; }
 .srv-hero__sub { font-size: 1.05rem; line-height: 1.78; color: rgba(255,255,255,.6); margin-bottom: 28px; letter-spacing: 0; font-family: "Sequel Sans Roman Body", Arial, sans-serif; }
 .srv-trust { display: flex; flex-wrap: wrap; gap: 14px 26px; margin-bottom: 36px; }
-.srv-trust__item { display: flex; align-items: center; gap: 9px; font-size: .78rem; color: rgba(255,255,255,.45); letter-spacing: .06em; text-transform: uppercase; font-family: "Sequel Sans Roman Body", Arial, sans-serif; }
+.srv-trust__item { display: flex; align-items: center; gap: 9px; font-size: .78rem; color: rgba(255,255,255,.45); letter-spacing: .07em; text-transform: uppercase; font-family: "Sequel Sans Roman Body", Arial, sans-serif; }
 .srv-trust__dot { width: 5px; height: 5px; border-radius: 50%; background: #f5c518; flex-shrink: 0; }
 .srv-cta-row { display: flex; flex-wrap: wrap; gap: 14px; }
 .srv-hero-img { display: flex; align-items: center; justify-content: center; }
-.srv-hero-img img { width: 100%; max-width: 520px; border-radius: 12px; object-fit: cover; }
+.srv-hero-img img { width: 100%; max-width: 480px; filter: drop-shadow(0 24px 48px rgba(0,0,0,0.55)); }
 
 .srv-divider { width: 100%; height: 1px; background: rgba(255,255,255,.06); }
 
 .srv-section { padding: 72px 5vw; max-width: 1100px; margin: 0 auto; }
-.srv-section__label { font-size: .7rem; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.3); margin-bottom: 10px; font-family: "Sequel Sans Roman Body", Arial, sans-serif; }
-.srv-section h2 { font-size: clamp(1.8rem,3.2vw,2.4rem); line-height: 1.12; letter-spacing: -.005em; color: #fff; margin-bottom: 44px; }
+.srv-section__label { font-size: .7rem; letter-spacing: .22em; text-transform: uppercase; color: rgba(255,255,255,.3); margin-bottom: 10px; font-family: "Sequel Sans Roman Body", Arial, sans-serif; }
+.srv-section h2 { font-size: clamp(1.8rem,3.2vw,2.4rem); line-height: 1.14; letter-spacing: 0.03em; color: #fff; margin-bottom: 44px; }
 
 .srv-problems { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px,1fr)); gap: 14px; }
 .srv-problem { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.07); border-radius: 10px; padding: 24px 22px; transition: border-color .2s; }
 .srv-problem:hover { border-color: rgba(245,197,24,.22); }
-.srv-problem__icon { font-size: 1.4rem; margin-bottom: 12px; }
-.srv-problem__title { font-size: .98rem; font-weight: 700; color: #fff; margin-bottom: 6px; letter-spacing: -.01em; }
-.srv-problem__desc { font-size: .86rem; line-height: 1.62; color: rgba(255,255,255,.42); }
+.srv-problem__icon { margin-bottom: 16px; line-height: 1; }
+.srv-problem__icon svg { display: block; }
+.srv-problem__title { font-size: .98rem; font-weight: 700; color: #fff; margin-bottom: 6px; letter-spacing: 0.03em; }
+.srv-problem__desc { font-size: .86rem; line-height: 1.62; color: rgba(255,255,255,.42); letter-spacing: 0; font-family: "Sequel Sans Roman Body", Arial, sans-serif; }
 
 .srv-process { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; }
 .srv-step { text-align: center; padding: 36px 24px; border-right: 1px solid rgba(255,255,255,.06); }
 .srv-step:last-child { border-right: none; }
-.srv-step__num { font-size: 3rem; font-weight: 700; color: #f5c518; line-height: 1; margin-bottom: 14px; letter-spacing: -.04em; }
-.srv-step__title { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 8px; }
+.srv-step__num { font-size: 3rem; font-weight: 700; color: #f5c518; line-height: 1; margin-bottom: 14px; letter-spacing: 0; }
+.srv-step__title { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 8px; letter-spacing: 0.04em; }
 .srv-step__desc { font-size: .86rem; line-height: 1.65; color: rgba(255,255,255,.42); }
 
 .srv-pricing-list { display: flex; flex-direction: column; }
@@ -141,14 +148,14 @@ h1, h2, h3, h4, h5, h6,
 .srv-faq__item { border-bottom: 1px solid rgba(255,255,255,.07); padding: 22px 0; cursor: pointer; }
 .srv-faq__item:first-child { border-top: 1px solid rgba(255,255,255,.07); }
 .srv-faq__q { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
-.srv-faq__question { font-size: .98rem; font-weight: 700; color: #fff; letter-spacing: -.01em; }
+.srv-faq__question { font-size: .98rem; font-weight: 700; color: #fff; letter-spacing: 0.04em; }
 .srv-faq__icon { color: #f5c518; font-size: 1.25rem; flex-shrink: 0; transition: transform .3s cubic-bezier(.4,0,.2,1); font-style: normal; }
 .srv-faq__answer { font-size: .92rem; line-height: 1.72; color: rgba(255,255,255,.52); max-height: 0; overflow: hidden; transition: max-height .35s cubic-bezier(.4,0,.2,1), padding .3s ease; }
 .srv-faq__item.open .srv-faq__icon { transform: rotate(45deg); }
 .srv-faq__item.open .srv-faq__answer { max-height: 220px; padding-top: 14px; }
 
 .srv-cta-section { background: rgba(245,197,24,.05); border-top: 1px solid rgba(245,197,24,.12); padding: 80px 5vw; text-align: center; }
-.srv-cta-section h2 { font-size: clamp(1.9rem,4vw,2.8rem); color: #fff; margin-bottom: 14px; letter-spacing: -.03em; }
+.srv-cta-section h2 { font-size: clamp(1.9rem,4vw,2.8rem); color: #fff; margin-bottom: 14px; letter-spacing: 0.03em; }
 .srv-cta-section p { font-size: 1rem; color: rgba(255,255,255,.5); margin-bottom: 34px; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.65; }
 .srv-cta-section .srv-cta-row { justify-content: center; }
 
@@ -219,7 +226,7 @@ h1, h2, h3, h4, h5, h6,
           <a href="/">Pocetna</a> &rsaquo; <a href="/usluge">Usluge</a> &rsaquo; Servis laptopa Sarajevo
         </nav>
         <p class="srv-hero__label">Mobilni servis &middot; Sarajevo</p>
-        <h1>Servis laptopa <span class="text-span">koji dolazi</span> k tebi</h1>
+        <h1>Servis laptopa <span class="text-span">koji dolazi</span> tebi</h1>
         <p class="srv-hero__sub">Ekran, baterija, tastatura, pregrijavanje ili spor sistem — dolazimo na tvoju adresu, preuzimamo laptop i dostavljamo ga nazad popravljen.</p>
         <div class="srv-trust">
           <span class="srv-trust__item"><span class="srv-trust__dot"></span>Besplatna dijagnostika</span>
@@ -236,9 +243,9 @@ h1, h2, h3, h4, h5, h6,
       <!-- Desna kolona: slika -->
       <div class="srv-hero-img">
         <img
-          src="https://cdn.prod.website-files.com/68a5a028f0d385ae75796c90/68a5ba15782ed602a520abac_MacBook%20Air%20(15%20inch).avif"
+          src="https://cdn.prod.website-files.com/68a5a028f0d385ae75796c90/68a5bd9d838d0ceb8474f830_MacBook%20Air%20(2022).avif"
           alt="Servis laptopa Sarajevo – Nešo Računari dolazi na adresu"
-          width="520"
+          width="480"
           loading="eager"
           fetchpriority="high"
         />
@@ -255,32 +262,32 @@ h1, h2, h3, h4, h5, h6,
     <h2>Najcesci kvarovi laptopa</h2>
     <div class="srv-problems">
       <div class="srv-problem">
-        <div class="srv-problem__icon">&#128421;</div>
+        <div class="srv-problem__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f5c518" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
         <div class="srv-problem__title">Zamjena ekrana</div>
         <div class="srv-problem__desc">Puknut ili neispavan displej, crne linije, mrlje na ekranu.</div>
       </div>
       <div class="srv-problem">
-        <div class="srv-problem__icon">&#128267;</div>
+        <div class="srv-problem__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f5c518" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="18" height="12" rx="2"/><path d="M23 13v-2"/><path d="M6 10v4M9 12H3"/></svg></div>
         <div class="srv-problem__title">Zamjena baterije</div>
         <div class="srv-problem__desc">Baterija se brzo prazni, ne drzi punjenje ili se ne puni uopce.</div>
       </div>
       <div class="srv-problem">
-        <div class="srv-problem__icon">&#9000;</div>
+        <div class="srv-problem__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f5c518" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><circle cx="7" cy="9" r="0.6" fill="#f5c518"/><circle cx="12" cy="9" r="0.6" fill="#f5c518"/><circle cx="17" cy="9" r="0.6" fill="#f5c518"/><circle cx="7" cy="13" r="0.6" fill="#f5c518"/><circle cx="17" cy="13" r="0.6" fill="#f5c518"/><path d="M9 13h6M8 17h8"/></svg></div>
         <div class="srv-problem__title">Zamjena tastature</div>
         <div class="srv-problem__desc">Tipke ne reaguju, slova se ne ukucavaju, fizicko ostecenje.</div>
       </div>
       <div class="srv-problem">
-        <div class="srv-problem__icon">&#127777;</div>
+        <div class="srv-problem__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f5c518" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg></div>
         <div class="srv-problem__title">Pregrijavanje</div>
         <div class="srv-problem__desc">Laptop se gasi sam, ventilator radi punom snagom, vruc dodir.</div>
       </div>
       <div class="srv-problem">
-        <div class="srv-problem__icon">&#128027;</div>
+        <div class="srv-problem__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f5c518" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="8" x2="12" y2="12"/><circle cx="12" cy="16" r="0.6" fill="#f5c518"/></svg></div>
         <div class="srv-problem__title">Virusi i malware</div>
         <div class="srv-problem__desc">Spor sistem, nepoznati programi, poruke i reklame koje ometaju rad.</div>
       </div>
       <div class="srv-problem">
-        <div class="srv-problem__icon">&#128167;</div>
+        <div class="srv-problem__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f5c518" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div>
         <div class="srv-problem__title">Prolijevanje tecnosti</div>
         <div class="srv-problem__desc">Voda ili kafa prosuta po laptopu — hitna intervencija sprecava vece stete.</div>
       </div>
