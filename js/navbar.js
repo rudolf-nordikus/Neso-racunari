@@ -2,8 +2,12 @@
   var navbar = document.querySelector('.newnavbar');
   if (!navbar) return;
 
-  // Set transition directly — prevents Webflow scripts from overriding CSS
-  navbar.style.transition = 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+  var EASING = 'cubic-bezier(0.4, 0, 0.2, 1)';
+  var HIDE_DURATION = '220ms';
+  var SHOW_DURATION = '300ms';
+
+  // Set transition directly so no CSS file can override it
+  navbar.style.transition = 'transform ' + SHOW_DURATION + ' ' + EASING + ', box-shadow 0.3s ease';
 
   // ---- Scroll shadow ----
   function updateShadow() {
@@ -17,19 +21,26 @@
   // ---- Hide on scroll down, show on scroll up ----
   var lastScrollY = window.scrollY;
   var ticking = false;
-  var navbarHeight = navbar.offsetHeight;
+  var hidden = false;
 
   function updateVisibility() {
     var currentScrollY = window.scrollY;
+    var navbarHeight = navbar.offsetHeight;
 
     if (currentScrollY > lastScrollY && currentScrollY > navbarHeight) {
-      // Scrolling down — hide fast
-      navbar.style.transitionDuration = '220ms';
-      navbar.classList.add('is-hidden');
+      if (!hidden) {
+        navbar.style.transition = 'transform ' + HIDE_DURATION + ' ' + EASING + ', box-shadow 0.3s ease';
+        navbar.style.transform = 'translateY(-100%)';
+        navbar.classList.add('is-hidden');
+        hidden = true;
+      }
     } else if (currentScrollY < lastScrollY) {
-      // Scrolling up — show smooth
-      navbar.style.transitionDuration = '300ms';
-      navbar.classList.remove('is-hidden');
+      if (hidden) {
+        navbar.style.transition = 'transform ' + SHOW_DURATION + ' ' + EASING + ', box-shadow 0.3s ease';
+        navbar.style.transform = 'translateY(0)';
+        navbar.classList.remove('is-hidden');
+        hidden = false;
+      }
     }
 
     lastScrollY = currentScrollY;
@@ -44,7 +55,6 @@
     }
   }, { passive: true });
 
-  // Run once on load
   updateShadow();
 
   // ---- Dropdown ----
