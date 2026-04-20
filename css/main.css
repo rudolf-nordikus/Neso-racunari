@@ -2713,7 +2713,7 @@ h3 {
   position: static;
 }
 
-.navbarlogo-white {
+.navbar-logo-secondary {
   height: 7px;
   display: none;
 }
@@ -4038,7 +4038,7 @@ h3 {
     overflow: visible;
   }
 
-  .navbarlogo-white {
+  .navbar-logo-secondary {
     min-height: 56px;
   }
 
