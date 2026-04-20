@@ -1,4 +1,4 @@
-(function () {
+window.addEventListener('load', function () {
   var navbar = document.querySelector('.newnavbar');
   if (!navbar) return;
 
@@ -6,7 +6,7 @@
   var HIDE_DURATION = '220ms';
   var SHOW_DURATION = '300ms';
 
-  // Set transition directly so no CSS file can override it
+  // Set transition after all scripts (including Webflow) have run
   navbar.style.transition = 'transform ' + SHOW_DURATION + ' ' + EASING + ', box-shadow 0.3s ease';
 
   // ---- Scroll shadow ----
@@ -56,30 +56,4 @@
   }, { passive: true });
 
   updateShadow();
-
-  // ---- Dropdown ----
-  document.querySelectorAll('.nav-dropdown__toggle').forEach(function (toggle) {
-    toggle.addEventListener('click', function (e) {
-      e.stopPropagation();
-      var dropdown = this.closest('.nav-dropdown');
-      var isOpen = dropdown.classList.contains('is-open');
-      document.querySelectorAll('.nav-dropdown').forEach(function (d) {
-        d.classList.remove('is-open');
-      });
-      if (!isOpen) dropdown.classList.add('is-open');
-    });
-  });
-
-  document.addEventListener('click', function () {
-    document.querySelectorAll('.nav-dropdown').forEach(function (d) {
-      d.classList.remove('is-open');
-    });
-  });
-
-  document.querySelectorAll('.nav-dropdown__link').forEach(function (link) {
-    link.addEventListener('click', function () {
-      var btn = document.querySelector('.w-nav-button');
-      if (btn && getComputedStyle(btn).display !== 'none') btn.click();
-    });
-  });
-})();
+});
