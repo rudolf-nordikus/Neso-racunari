@@ -55,7 +55,10 @@ html {
   opacity: 0.7;
 }
 
-/* ---- Navbar scroll shadow ---- */
+/* ---- Navbar scroll shadow + GPU layer ---- */
+.newnavbar {
+  will-change: transform;
+}
 .newnavbar.is-scrolled {
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.45);
 }
