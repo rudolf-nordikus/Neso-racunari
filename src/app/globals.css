@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+/* Neso Računari dizajn sistem v1. Font: Geist. Isti tokeni su u Figmi (kolekcija "Neso Tokens"). */
+@theme {
+  --color-blue-500: #0084ff;
+  --color-blue-100: #d3eaff;
+  --color-amber-500: #ffc300;
+  --color-navy-900: #00142d;
+  --color-navy-800: #001c36;
+  --color-navy-700: #0a2a4d;
+  --color-navy-950: #000c1c;
+  --color-white: #ffffff;
+  --color-white-64: rgb(255 255 255 / 0.64);
+
+  --font-sans: var(--font-geist), system-ui, sans-serif;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  --container-site: 1280px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 96px;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background: var(--color-navy-950);
+    color: var(--color-white);
+    font-family: var(--font-sans);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+  /* Akcent riječ u naslovu: <em> unutar naslova */
+  :is(h1, h2, h3) em {
+    font-style: normal;
+    font-weight: 300;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-amber-500);
+    outline-offset: 3px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ---------- animacije ---------- */
+@keyframes stepIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Sekcije se pojave kad uđu u ekran (samo kad JS radi; bez JS-a sve je vidljivo). */
+[data-reveal] {
+  transition:
+    opacity 0.7s ease,
+    transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+html.js [data-reveal]:not([data-in]) {
+  opacity: 0;
+  transform: translateY(36px) scale(0.97);
+}
+html.js [data-stagger] > * {
+  transition:
+    opacity 0.5s ease,
+    transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition-delay: calc(var(--i, 0) * 60ms);
+}
+html.js [data-reveal]:not([data-in]) [data-stagger] > * {
+  opacity: 0;
+  transform: translateY(18px) scale(0.94);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.js [data-reveal]:not([data-in]),
+  html.js [data-reveal]:not([data-in]) [data-stagger] > * {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Hero od ivice do ivice (Figma v4, 17.11.): izlazi iz bento kontejnera, bez zaobljenja. */
+html,
+body {
+  overflow-x: clip;
+}
+.full-bleed {
+  margin-inline: calc(50% - 50vw);
+}
+main > section.full-bleed:first-of-type {
+  margin-top: -0.5rem;
+}
+@media (min-width: 48rem) {
+  main > section.full-bleed:first-of-type {
+    margin-top: -0.75rem;
+  }
+}
