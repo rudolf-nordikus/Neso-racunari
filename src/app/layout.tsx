@@ -35,6 +35,8 @@ export const metadata: Metadata = {
   },
   twitter: { card: "summary_large_image" },
   icons: { icon: "/brand/favicon.png", apple: "/brand/webclip.png" },
+  // Bing Webmaster Tools verifikacija (ne brisati).
+  verification: { other: { "msvalidate.01": "49A7A3FC6C7D9E4E771555D4994CF1B8" } },
 };
 
 export const viewport: Viewport = {
