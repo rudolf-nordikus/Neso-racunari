@@ -18,6 +18,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...usluge.map((u) => e(`/${u.slug}`, 0.9)),
     e("/kontakt", 0.7),
     e("/blog", 0.6),
-    ...blog.map((p) => e(`/blog/${p.slug}`, 0.5, new Date(p.datum))),
+    ...blog.map((p) => e(`/blog/${p.slug}`, 0.5, new Date(p.azurirano ?? p.datum))),
   ];
 }

@@ -1,5 +1,5 @@
 // Sadržaj preuzet sa starog sajta (16.11.2026.), ispravljeni tipfeleri. Rečenice "dolazimo na vašu adresu" izbačene (CTA to pokriva).
-export type BlogPost = { slug: string; title: string; seoTitle: string; description: string; datum: string; minuta: number; ikona: string; usluga: string; intro: string[]; sekcije: { h: string; p: string[]; li: string[] }[] };
+export type BlogPost = { slug: string; title: string; seoTitle: string; description: string; datum: string; azurirano?: string; minuta: number; ikona: string; usluga: string; intro: string[]; sekcije: { h: string; p: string[]; li: string[] }[] };
 
 export const blog: BlogPost[] = [
   {
@@ -119,6 +119,7 @@ export const blog: BlogPost[] = [
     "description": "Pregled okvirnih cijena najčešćih popravki laptopa u Sarajevu: zamjena ekrana, baterije, čišćenje, instalacija sistema i više. Transparentne cijene, mobilni dolazak.",
     "seoTitle": "Koliko košta servis laptopa u Sarajevu | Neso Računari Sarajevo",
     "datum": "2026-04-13",
+    "azurirano": "2026-11-20",
     "minuta": 5,
     "ikona": "ekran",
     "usluga": "servis-laptopa-sarajevo",
@@ -130,14 +131,14 @@ export const blog: BlogPost[] = [
       {
         "h": "Okvirne cijene servisnih zahvata",
         "p": [
-          "Čišćenje laptopa i zamjena termalne paste: 30 do 50 KM Uklanjamo prašinu iz hladnjaka i mijenjamo termalnu pastu. Rješava problem pregrijavanja i produžava vijek uređaja. Preporučujemo jednom godišnje za starije laptope.",
+          "Čišćenje laptopa i zamjena termalne paste: 40 do 60 KM Uklanjamo prašinu iz hladnjaka i mijenjamo termalnu pastu. Rješava problem pregrijavanja i produžava vijek uređaja. Preporučujemo jednom godišnje za starije laptope.",
           "Zamjena baterije: 50 do 150 KM Cijena uključuje novu bateriju i ugradnju. Varira ovisno o marki i modelu laptopa. Za HP, Dell, Lenovo i Acer uglavnom 50 do 100 KM. Za MacBook od 150 KM naviše.",
-          "Instalacija Windowsa: 30 do 50 KM Uključuje backup podataka, instalaciju sistema i instalaciju osnovnih programa.",
+          "Instalacija Windowsa: 50 do 70 KM Osnovna instalacija od 50 KM, sa driverima i osnovnim programima od 70 KM. Backup podataka po potrebi, od 30 KM.",
           "Zamjena ekrana: 80 do 250 KM Cijena ovisi o veličini, rezoluciji i tipu ekrana. Full HD ekrani su jeftiniji, 4K i touch ekrani skuplje.",
           "Zamjena SSD ili HDD diska: 30 do 50 KM + cijena diska SSD od 256 GB kreće se od 40 KM, 512 GB od 60 KM, 1 TB od 90 KM naviše.",
-          "Uklanjanje virusa: 30 do 60 KM Ovisi o stepenu zaraze. Ako je potrebna reinstalacija sistema, cijena je kao za instalaciju Windowsa.",
-          "Zamjena tastature: 40 do 90 KM Ovisi o modelu laptopa i dostupnosti dijela.",
-          "Nadogradnja RAM memorije: 20 do 40 KM + cijena memorije Značajno ubrzava starije laptope. RAM od 8 GB kreće se od 25 KM naviše."
+          "Uklanjanje virusa: 60 do 80 KM Ovisi o stepenu zaraze. Ako je potrebna reinstalacija sistema, cijena je kao za instalaciju Windowsa.",
+          "Zamjena tastature: 60 do 90 KM Ovisi o modelu laptopa i dostupnosti dijela.",
+          "Nadogradnja RAM memorije: 30 do 40 KM + cijena memorije Značajno ubrzava starije laptope. RAM od 8 GB kreće se od 25 KM naviše."
         ],
         "li": []
       },

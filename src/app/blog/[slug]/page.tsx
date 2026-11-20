@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: PageProps<"/blog/[slug]">): P
     title: p.seoTitle || p.title,
     description: p.description,
     alternates: { canonical: `/blog/${p.slug}` },
-    openGraph: { type: "article", title: p.title, description: p.description, publishedTime: p.datum },
+    openGraph: { type: "article", title: p.title, description: p.description, publishedTime: p.datum, modifiedTime: p.azurirano ?? p.datum },
   };
 }
 
@@ -38,7 +38,7 @@ export default async function ClanakPage({ params }: PageProps<"/blog/[slug]">) 
     <>
       <JsonLd
         data={[
-          articleSchema({ title: p.title, description: p.description, path: `/blog/${p.slug}`, datePublished: p.datum }),
+          articleSchema({ title: p.title, description: p.description, path: `/blog/${p.slug}`, datePublished: p.datum, dateModified: p.azurirano }),
           breadcrumbSchema([
             { name: "Početna", path: "/" },
             { name: "Blog", path: "/blog" },
